@@ -92,3 +92,17 @@ categoryFilter.addEventListener("change", renderClubs);
 dayFilter.addEventListener("change", renderClubs);
 
 renderClubs();
+
+const searchMarquee = document.getElementById("searchMarquee");
+
+function updateMarqueeVisibility() {
+  if (!searchMarquee) return;
+  const hasValue = searchInput.value.length > 0;
+  const isFocused = document.activeElement === searchInput;
+  searchMarquee.classList.toggle("is-hidden", hasValue || isFocused);
+}
+
+searchInput.addEventListener("input", updateMarqueeVisibility);
+searchInput.addEventListener("focus", updateMarqueeVisibility);
+searchInput.addEventListener("blur", updateMarqueeVisibility);
+updateMarqueeVisibility();
