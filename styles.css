@@ -1,5 +1,5 @@
 :root {
-  --primary: #8b1e24; /* Byram Hills crimson */
+  --primary: #8b1e24;
   --primary-light: #fdf2f2;
   --bg: #f8fafc;
   --card-bg: #ffffff;
@@ -18,13 +18,13 @@
 body {
   background: var(--bg);
   color: var(--text);
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 header {
   background: var(--primary);
   color: white;
-  padding: 2.5rem 1.5rem;
+  padding: 2.25rem 1.5rem;
   text-align: center;
 }
 
@@ -50,8 +50,8 @@ input, select {
 }
 
 main {
-  max-width: 1120px;
-  margin: 1.5rem auto 2.5rem;
+  max-width: 820px;
+  margin: 1.75rem auto 3rem;
   padding: 0 1.5rem;
 }
 
@@ -61,49 +61,84 @@ main {
   margin-bottom: 1rem;
 }
 
-.club-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 1.25rem;
+.club-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .club-card {
   background: var(--card-bg);
   border: 1px solid var(--border);
   border-radius: 12px;
-  padding: 1.35rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-  display: flex;
-  flex-direction: column;
-  gap: 0.6rem;
+  padding: 1.5rem;
+  box-shadow: 0 1px 4px rgba(15, 23, 42, 0.04);
 }
 
-.club-card > p:first-of-type {
-  flex-grow: 1;
+.card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.35rem;
+}
+
+.club-card h2 {
+  font-size: 1.3rem;
+  color: var(--text);
 }
 
 .badge {
-  align-self: flex-start;
   background: var(--primary-light);
   color: var(--primary);
   font-size: 0.78rem;
   font-weight: 700;
-  padding: 0.2rem 0.65rem;
+  padding: 0.2rem 0.7rem;
   border-radius: 999px;
 }
 
-.meta {
+.description {
+  color: var(--text);
+  margin-top: 0.5rem;
+}
+
+.toggle-btn {
+  background: none;
+  border: none;
+  color: var(--primary);
+  font-weight: 600;
   font-size: 0.9rem;
+  cursor: pointer;
+  padding: 0.25rem 0;
+  margin-top: 0.25rem;
+}
+
+.toggle-btn:hover {
+  text-decoration: underline;
+}
+
+.details {
+  margin-top: 0.9rem;
+  padding-top: 0.85rem;
+  border-top: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  font-size: 0.92rem;
   color: var(--muted);
 }
 
+.details strong {
+  color: var(--text);
+}
+
 .advisor-link {
-  margin-top: auto;
-  padding-top: 0.5rem;
-  font-size: 0.9rem;
+  margin-top: 0.35rem;
   font-weight: 600;
   color: var(--primary);
   text-decoration: none;
+  align-self: flex-start;
 }
 
 .advisor-link:hover {
