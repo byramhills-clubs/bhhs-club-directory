@@ -78,6 +78,10 @@ main {
   gap: 0.6rem;
 }
 
+.club-card > p:first-of-type {
+  flex-grow: 1;
+}
+
 .badge {
   align-self: flex-start;
   background: var(--primary-light);
