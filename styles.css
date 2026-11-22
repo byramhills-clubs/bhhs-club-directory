@@ -42,6 +42,53 @@ header p {
   flex-wrap: wrap;
 }
 
+.search-wrapper {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  min-width: 240px;
+  max-width: 300px;
+  background: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.search-wrapper input {
+  width: 100%;
+  min-width: 0;
+  background: transparent;
+  color: var(--text);
+  position: relative;
+  z-index: 2;
+}
+
+.search-marquee {
+  position: absolute;
+  left: 0;
+  white-space: nowrap;
+  color: #64748b;
+  font-size: 0.95rem;
+  pointer-events: none;
+  z-index: 1;
+  padding-left: 100%;
+  animation: marqueeScroll 9s linear infinite;
+}
+
+.search-wrapper:focus-within .search-marquee,
+.search-marquee.is-hidden {
+  opacity: 0;
+  animation-play-state: paused;
+}
+
+@keyframes marqueeScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
 input, select {
   padding: 0.65rem 1rem;
   border-radius: 8px;
