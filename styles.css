@@ -51,7 +51,7 @@ input, select {
 }
 
 .search-input {
-  width: 315px;
+  width: 360px;
   max-width: 100%;
   background: #ffffff;
   color: var(--text);
