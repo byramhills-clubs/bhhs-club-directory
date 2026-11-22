@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BHHS Club Directory</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Byram Hills High School Club Directory</h1>
+    <p>Explore student clubs, filter by meeting day or interest, and connect with advisors.</p>
+    <div class="controls">
+      <input type="text" id="searchInput" placeholder="Search clubs, keywords, or advisors..." />
+      <select id="categoryFilter">
+        <option value="all">All Categories</option>
+        <option value="Academic">Academic Clubs</option>
+        <option value="Community Building">Community Building Clubs</option>
+        <option value="Service Based">Service Based Clubs</option>
+        <option value="General Interests">General Interests Clubs</option>
+      </select>
+      <select id="dayFilter">
+        <option value="all">Any Meeting Day</option>
+        <option value="Monday">Monday</option>
+        <option value="Tuesday">Tuesday</option>
+        <option value="Wednesday">Wednesday</option>
+        <option value="Thursday">Thursday</option>
+        <option value="Friday">Friday</option>
+        <option value="Flexible">Monthly / TBD</option>
+      </select>
+    </div>
+  </header>
+
+  <main>
+    <p id="resultCount" class="result-count"></p>
+    <section id="clubGrid" class="club-grid"></section>
+  </main>
+
+  <footer>
+    <p>Built & maintained by BHHS Girls Who Code.</p>
+  </footer>
+
+  <script src="clubs.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
