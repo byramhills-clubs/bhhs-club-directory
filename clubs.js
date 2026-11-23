@@ -1,6 +1,6 @@
 // Add new clubs by copying one { ... } block and pasting it inside the brackets!
-const CLUBS = [
   const clubs = [
+  // ===== ACADEMIC =====
   {
     name: "Academic Challenge",
     category: "Academic",
@@ -23,7 +23,7 @@ const CLUBS = [
   },
   {
     name: "Architecture Club",
-    category: "STEM",
+    category: "Academic",
     days: ["Monday"],
     meetingTime: "First Monday of every month",
     location: "Room 423",
@@ -33,7 +33,7 @@ const CLUBS = [
   },
   {
     name: "Astronomy Club",
-    category: "STEM",
+    category: "Academic",
     days: [],
     meetingTime: "TBD",
     location: "TBD",
@@ -43,7 +43,7 @@ const CLUBS = [
   },
   {
     name: "Engineering Club",
-    category: "STEM",
+    category: "Academic",
     days: [],
     meetingTime: "TBD",
     location: "TBD",
@@ -53,7 +53,7 @@ const CLUBS = [
   },
   {
     name: "Government & Politics Club",
-    category: "Government & Law",
+    category: "Academic",
     days: ["Wednesday"],
     meetingTime: "Every other Wednesday after school",
     location: "Room 201",
@@ -73,7 +73,7 @@ const CLUBS = [
   },
   {
     name: "Mock Trial",
-    category: "Government & Law",
+    category: "Academic",
     days: ["Tuesday"],
     meetingTime: "Tuesdays from 2:30-3:30 after school",
     location: "Room 411",
@@ -83,7 +83,7 @@ const CLUBS = [
   },
   {
     name: "Model United Nations",
-    category: "Government & Law",
+    category: "Academic",
     days: [],
     meetingTime: "Contact advisor",
     location: "TBD",
@@ -93,7 +93,7 @@ const CLUBS = [
   },
   {
     name: "Peer Tutoring Club",
-    category: "Service",
+    category: "Academic",
     days: [],
     meetingTime: "Tutors meet once a month to review experiences (15-20 minutes)",
     location: "TBD",
@@ -103,7 +103,7 @@ const CLUBS = [
   },
   {
     name: "The Pre-Pre Med Club",
-    category: "STEM",
+    category: "Academic",
     days: ["Monday"],
     meetingTime: "First Monday of each month",
     location: "Room 209",
@@ -113,7 +113,7 @@ const CLUBS = [
   },
   {
     name: "Science Olympiad",
-    category: "STEM",
+    category: "Academic",
     days: [],
     meetingTime: "Varies depending on the events and level of preparation",
     location: "TBD",
@@ -123,7 +123,7 @@ const CLUBS = [
   },
   {
     name: "Shark Tank Club",
-    category: "Business",
+    category: "Academic",
     days: [],
     meetingTime: "TBD (meets once a month)",
     location: "TBD",
@@ -133,7 +133,7 @@ const CLUBS = [
   },
   {
     name: "Speech and Debate",
-    category: "Government & Law",
+    category: "Academic",
     days: ["Tuesday", "Thursday"],
     meetingTime: "Tuesdays and Thursdays 2:30-4:00",
     location: "TBD",
@@ -150,7 +150,452 @@ const CLUBS = [
     description: "The Byram Hills Students Who Code Club provides students with the means, knowledge, and opportunity to explore and participate in coding and software. The Students Who Code Club seeks to prepare BHHS students with 21st century skills and the confidence to pursue future careers in STEM. This year, the club will be teaching the basics of website development whilst coding a website to organize Byram Hills school-wide clubs. The club will also host a series of discussions on the current culture of technology and the importance of expanding computer science education.",
     advisor: "Mr. Lewick",
     email: "clewick@byramhills.net"
-    
+  },
+
+  // ===== COMMUNITY BUILDING =====
+  {
+    name: "Allergy Awareness Club",
+    category: "Community Building",
+    days: [],
+    meetingTime: "Once a month",
+    location: "Room 318",
+    description: "The Allergy Awareness Club's mission is to bring out allergy awareness at Byram Hills. Any money we collect will be donated to allergy research and to buy allergy friendly foods that will be donated to families who are underprivileged. We will be working with the organization Free From Market. The families that work with Free From Market have one or more family members that have an allergy. Students who are passionate about making a difference in the allergy community and desire to get involved in high school should join the AAC in the fight for allergy awareness!",
+    advisor: "Mrs. Cohen",
+    email: "ecohen@byramhills.net"
+  },
+  {
+    name: "Arch Yearbook",
+    category: "Community Building",
+    days: ["Thursday"],
+    meetingTime: "Thursdays after school",
+    location: "Room 215",
+    description: "Students involved in this club take on the responsibility for producing the Arch yearbook. Students have the chance to assume leadership roles as editors, writers, designers, photographers, and business managers, while collaborating with other students to plan and create content, meet deadlines, and interact with students, parents, administrators, and community members. Staff members also have opportunities to attend national journalism conferences at Columbia University and workshops elsewhere to learn cutting-edge trends in both print and digital journalism. For questions regarding school pictures, contact Lifetouch/Prestige Portraits: 800-426-9533",
+    advisor: "Ms. Vernola",
+    email: "svernola@byramhills.net"
+  },
+  {
+    name: "The Canvas",
+    category: "Community Building",
+    days: ["Wednesday"],
+    meetingTime: "Every other Wednesday",
+    location: "Mrs. Horn's Room",
+    description: "The Canvas! This is a student run art and literary publication that includes poetry, short stories, and various forms of artwork. Through our winter and spring issues, we seek to expose the creative works of Byram Hills students and faculty.",
+    advisor: "Mrs. Horn",
+    email: "lhorn@byramhills.net"
+  },
+  {
+    name: "Fighting Anti Semitism Club",
+    category: "Community Building",
+    days: ["Tuesday"],
+    meetingTime: "Tuesdays after school, once a month",
+    location: "Room 213",
+    description: "The Byram Hills Fighting Against Anti-Semitism club believes that through education, antisemitism can be prevented in our community. We look at current events while also acknowledging history, when necessary. The FAAS club is a judgement free space for students to share any past experiences regarding antisemitism. While a presentation is usually made, student participation and involvement is something we value. All Byram Hills students, Jewish and non-Jewish are welcome to participate.",
+    advisor: "Ms. Squadron",
+    email: "lsquadron@byramhills.net"
+  },
+  {
+    name: "GSA: Gender and Sexuality Alliance",
+    category: "Community Building",
+    days: ["Monday"],
+    meetingTime: "Most Mondays after school",
+    location: "Band Room",
+    description: "The goal of the Genders and Sexualities Alliance Club (GSA) is to improve the environment and the community at Byram Hills. We strive to educate and spread knowledge and awareness about the issues that have an impact on gay, lesbian, straight, bisexual, transgender, and questioning youth. We want this club to represent the best of Byram Hills--respect for others regardless of who they are. Help us create a more welcoming school here at Byram Hills!",
+    advisor: "Mrs. Horn",
+    email: "lhorn@byramhills.net"
+  },
+  {
+    name: "High School Science Ambassadors",
+    category: "Community Building",
+    days: [],
+    meetingTime: "See advisor for details",
+    location: "TBD",
+    description: "High School Science Ambassadors, or HSSA, is a club for students who love science and want to share their passion with elementary students. In this club, members will make videos of science experiments which will be shared with a 2nd grade class. While this club will be a lot of fun, members should also know that they will have to put in some work to ensure that all of our videos are complete. We would like to make at least 5 videos this school year.",
+    advisor: "Mr. Borneman",
+    email: "sborneman@byramhills.net"
+  },
+  {
+    name: "Helping Young People Excel (H.Y.P.E.)",
+    category: "Community Building",
+    days: [],
+    meetingTime: "Once a month",
+    location: "Room 215",
+    description: "The purpose of Helping Young People Excel is to develop an awareness, understanding, and connection between Byram Hills High School students and members of the community who have special needs. We plan monthly events during which we engage in fun and skill-building activities such as crafts, games, and snack making. This experience allows Byram Hills students and the guests to expand their understanding and acceptance of all individuals.",
+    advisor: "Ms. Lewis",
+    email: "klewis@byramhills.net"
+  },
+  {
+    name: "Medequity",
+    category: "Community Building",
+    days: ["Wednesday"],
+    meetingTime: "Wednesdays twice a month from 2:30-3:00",
+    location: "CCC",
+    description: "MedEquity is a student-led organization dedicated to promoting health equality throughout Westchester by providing essential medical supplies to underserved communities and raising awareness about overlooked medical issues and diseases. Our mission is to educate students about the causes they support and empower them to take meaningful action, making a positive impact on public health. The club focuses on medical concerns that often go unnoticed, rotating its attention every few months to highlight various health disparities. Through donation drives, volunteer events, and student-led educational presentations, MedEquity encourages compassion, community connection, and lasting engagement.",
+    advisor: "Mrs. Berman",
+    email: ""
+  },
+  {
+    name: "Native American Rights Fund",
+    category: "Community Building",
+    days: [],
+    meetingTime: "Contact advisor for details (meets once a month after school)",
+    location: "TBD",
+    description: "The Native American Rights Fund raises awareness for Native American Reservations nationwide! We hope to build a community that inspires hope for future generations of the Native American community. We meet once a month after school and food is provided! We are excited about this year and have new and exciting things planned.",
+    advisor: "Ms. Mirsky",
+    email: "mmirsky@byramhills.net"
+  },
+  {
+    name: "The Oracle",
+    category: "Community Building",
+    days: ["Monday", "Tuesday"],
+    meetingTime: "Mondays and/or Tuesdays; dates are posted in the Google Classroom. Email bhhsoracle@byramhills.net to join",
+    location: "TBD",
+    description: "The Oracle is the Byram Hills High School newspaper. We are dedicated to helping students build skills in journalism and public expression, in addition to helping students establish a sense of community. The Oracle publishes new articles online daily throughout the year. Articles focus on issues that concern students in Byram Hills and the community at large.",
+    advisor: "Mrs. Eshoo",
+    email: "ceshoo@byramhills.org"
+  },
+  {
+    name: "Social Media and Content Creation Club",
+    category: "Community Building",
+    days: ["Monday"],
+    meetingTime: "First Monday of every month starting at 2:30",
+    location: "Room 419",
+    description: "The Media Literacy Club is about learning more about social media, marketing, and advertising. We'll talk about popular trends, how brands promote themselves, and how to stay safe and smart while using social media. We'll also do fun activities and share ideas about what we see on social media.",
+    advisor: "Mr. Ramos",
+    email: "lramos@byramhills.net"
+  },
+  {
+    name: "Students Against Destructive Decisions (SADD)",
+    category: "Community Building",
+    days: [],
+    meetingTime: "Once a month",
+    location: "Room 206",
+    description: "SADD is a student-led club focusing on making positive choices and encouraging others to do the same. We work to spread awareness about the dangers of risky behaviors like substance use, reckless driving and peer pressure while promoting safe, healthy alternatives. Through school events, campaigns, and community outreach, we strive to create a supportive environment where every student can feel empowered to make smart devisions. Join us in making a difference and being a voice for change!",
+    advisor: "Mr. Carpenter",
+    email: "dcarpenter@byramhills.net"
+  },
+  {
+    name: "Student Athletic Leadership Club (SALT/FAST)",
+    category: "Community Building",
+    days: [],
+    meetingTime: "Contact advisor for details",
+    location: "TBD",
+    description: "The Student Athletic Leadership Club (SALT and/or FAST for short) aims to foster a culture of sportsmanship and leadership among student-athletes. Our mission is to engage and educate students about the values of teamwork, respect, and integrity both on and off the field. Through workshops at HCC- we aim to empower students to become role models in athletics, promoting a positive and inclusive environment where every participant can thrive.",
+    advisor: "Ms. Healy and Ms. Mirsky",
+    email: "khealy@byramhills.net and mirsky@byramhills.net"
+  },
+  {
+    name: "Students of Cultural Association (SOCA)",
+    category: "Community Building",
+    days: [],
+    meetingTime: "Every other week, dates TBD",
+    location: "TBD",
+    description: "Students in this club work to empower students from different backgrounds, celebrate cultural diversity, and foster inclusivity within the school community. Together we will plan and carry out events aligned with cultural and heritage months, organize volunteer opportunities, and participate in discussions that promote awareness.",
+    advisor: "Mr. Torres",
+    email: "rtorres@byramhills.net"
+  },
+  {
+    name: "Student Wellness Advisory Committee",
+    category: "Community Building",
+    days: ["Wednesday"],
+    meetingTime: "Once a month on Wednesdays",
+    location: "Room 203",
+    description: "Are you interested in helping students remain stress-free and thrive at Byram Hills? If so, the Student Wellness Advisory Committee (SWAC) may be the right club for you. We create and organize events which promote positive ways to deal with our emotions and improve mental health. Our largest event of the year is Wellness Day, where we invite professionals to speak about the most pressing issues affecting students. In addition, they provide new and different ways to cope with any issues students may be facing. We give a platform for students to improve their well-being when they may be struggling or scared to speak about the issues which are impacting them.",
+    advisor: "Mrs. Healy",
+    email: "kealy@byramhills.net"
+  },
+
+  // ===== SERVICE BASED =====
+  {
+    name: "The Byram Hills Sustainability Initiative",
+    category: "Service Based",
+    days: ["Wednesday"],
+    meetingTime: "Every Wednesday",
+    location: "Admin Conference Room",
+    description: "The mission of The Byram Hills Sustainability Initiative is dedicated to improving the environment and advocating for positive change and improvement of our school's sustainability practices.",
+    advisor: "Ms. Bogren",
+    email: ""
+  },
+  {
+    name: "Do Something Club",
+    category: "Service Based",
+    days: [],
+    meetingTime: "Once a month",
+    location: "Room 119 (across from the theater)",
+    description: "The DoSomething Club's goal is to bring students together to create change and make a positive impact on the world. To do this, the club will meet once a month to complete campaigns that cost almost nothing to students. There are a multitude of amazing campaigns to take part in. Some campaigns are as simple as leaving positive post-it notes around school (on bathroom mirrors and lockers) to brighten someone's day or recognizing everyday heroes like teachers and custodians with cards of appreciation. Additionally, there are campaigns that address environmental issues, racial inequality, voting, and so much more. The final goal of this club is to make these acts of kindness available to all members of the school community. It's important to show high school students that they can create change and make a positive impact on the world all on their own.",
+    advisor: "Ms. DeRosa",
+    email: ""
+  },
+  {
+    name: "Fuller Builders Club",
+    category: "Service Based",
+    days: [],
+    meetingTime: "Monthly; check the Fuller Builders Club Google Classroom for meeting information",
+    location: "TBD",
+    description: "The Fuller Builders Club meets monthly with announcements coming via the Fuller Builders Club Google Classroom. The club meetings are usually to discuss upcoming builds in the area. We work to fight poverty and homelessness by building low-income housing. Just recently, the club worked on the construction of a building in Chappaqua that will be made into a two family home for two low income families. We also work to aid in disaster relief.",
+    advisor: "Ms. Linares",
+    email: "mlinares@byramhill.net"
+  },
+  {
+    name: "Growth and Awareness Group for Alzheimer's",
+    category: "Service Based",
+    days: ["Monday", "Thursday"],
+    meetingTime: "Typically Monday and/or Thursday after school",
+    location: "Mr. Hubbs' Room",
+    description: "The Growth and Awareness Group for Alzheimer's (GAGA) is aiming to help fight to end Alzheimer's disease. We can fight for the families witnessing their loved ones deteriorate. We can fight for the 44 million people worldwide suffering. And finally, we can fight for future generations who should never have to face such a tragic disease. In order to reach this goal, GAGA participates in the annual Walk to End Alzheimer's. The event is a super exciting time for GAGA as we celebrate our work and walk alongside hundreds of others fighting for the same cause. We also organize bake sales, host fundraisers at local retail shops, and are even planning a gaga tournament to raise money! Last but not least, our club has visited the Bristal in Armonk and conducted a music therapy event with memory care patients; we hope to plan more of these events this year. Join our Google Classroom with code \"hd5zs73\", and sign up for the walk or donate using this link: http://act.alz.org/goto/GAGA_BHHS",
+    advisor: "Ms. Dellacioppa",
+    email: ""
+  },
+  {
+    name: "Interact",
+    category: "Service Based",
+    days: ["Monday"],
+    meetingTime: "Every other Monday at 2:30",
+    location: "Room 108",
+    description: "The Interact Club is a community service club affiliated with the Armonk Rotary Club. The goal of the Interact Club is to provide young people with fun, meaningful community service opportunities while developing their leadership and interpersonal skills. The Interact Club supports a number of organizations through its fundraisers. In the past, we have worked with the Boys & Girls Club of America, Big Brothers Big Sisters, Maria Fareri Children's Hospital, Child's Play, the Pulsera Project, Team Rubicon, PolioPlus, and more. Additionally, every year, the Interact Club holds a Halloween Party at the North Castle Public Library in which younger children participate in Halloween festivities. The Interact Club is always looking for new members. If you have an interest in any of the causes we support or genuinely enjoy helping people in need, feel free to come to one of our meetings.",
+    advisor: "Mr. Eagle",
+    email: "eeagle@byramhills.net"
+  },
+  {
+    name: "National Art Honors Society",
+    category: "Service Based",
+    days: [],
+    meetingTime: "Once a month (posted on Classroom)",
+    location: "Room 316",
+    description: "We work to promote artistic expression and creativity through acts of service and community. In NAHS, we participate in many activities such as pumpkin painting, fundraisers, and art shows with the Byram Hills Community and surrounding organizations. In the past, we have worked with Coman Hill and Wampus, veterans and children's hospitals in order to share our passion and creativity.",
+    advisor: "Ms. Karlin and Ms. Menashe",
+    email: ""
+  },
+  {
+    name: "One World Club",
+    category: "Service Based",
+    days: ["Thursday"],
+    meetingTime: "Thursdays at 2:30",
+    location: "TBD",
+    description: "We aim to provide many opportunities for students to become proactive and responsible citizens by participating in or attending charity events and fundraisers that raise awareness and funds for various global and local organizations in need. Club events and activities include bake sales, a Mother's Day plant sale, cooking brunch for the Ronald McDonald House, an annual car wash, and an annual benefit concert/talent show.",
+    advisor: "Mr. Lockwood",
+    email: "alockwood@byramhills.net"
+  },
+  {
+    name: "Paws for a Cause",
+    category: "Service Based",
+    days: [],
+    meetingTime: "Every three weeks, times and dates TBD",
+    location: "Mrs. Barnum's Room",
+    description: "Paws for a Cause is a student-run volunteer club dedicated to supporting animal welfare in Westchester County. Our club allows us to make a difference for shelter animals. We are partnering with Paws Crossed in Elmsford to provide consistent animal care, raise awareness about animal welfare, and organize fundraising/donation drives to supply shelters with necessary resources. We will meet approximately every three weeks to discuss plans in Mrs. Barnum's room to visit Paws Crossed and fundraising.",
+    advisor: "Ms. Barnum",
+    email: "rbarnum@byramhills.net"
+  },
+  {
+    name: "Shoot Your Shot",
+    category: "Service Based",
+    days: [],
+    meetingTime: "Once a month",
+    location: "Room 424",
+    description: "The shoot your shot club is dedicated to donating sports equipment to underprivileged kids throughout the state, and hopefully even the country. Sports equipment is taken by granted by many kids, and it is a vital aspect of every child's life. The shoot your shot club wants to be able to help these kids use sports as a way to achieve their dreams, and additionally use sports as an escape and something they can go to when they need it.",
+    advisor: "Mr. Bruskewicz",
+    email: "dbruskewicz@byramhills.net"
+  },
+  {
+    name: "Students Serving Soldiers",
+    category: "Service Based",
+    days: [],
+    meetingTime: "See advisor for details",
+    location: "TBD",
+    description: "We raise awareness about the sacrifices servicemen and women make. We send care packages and letters to warzones to provide support and make their deployment a little bit easier. Raise money for wounded servicemen and women that can be used to make rehabilitation easier. We also raise money to support the families of fallen servicemen and women. Organizations we work with include OSOT (Operation Support our Troops), Operation Gratitude, and the Westchester County Department of Veteran Affairs. Ways to reach our goals include bake sales, collecting supplies, volunteering at events that support veterans, and visiting wounded warriors.",
+    advisor: "Mr. Gulick",
+    email: "jgulick@byramhills.net"
+  },
+  {
+    name: "Youth Against Cancer",
+    category: "Service Based",
+    days: ["Tuesday", "Thursday"],
+    meetingTime: "Tuesdays or Thursdays, once or twice a month",
+    location: "Room 322",
+    description: "The primary purpose of YAC is to raise awareness in the school and community about cancer, its prevention, detection and treatment. Throughout the year, the club raises money for the American Cancer Society, Brain Tumor Network, Soul Ryders, Maria Fareri Children's Hospital, Children's Cancer Research Fund, Memorial Sloan Kettering Giving, Ty Louis Campbell Foundation. In addition, our members participate in local events sponsored by the American Cancer Society.",
+    advisor: "Mr. Hubbs",
+    email: "dhubbs@byramhills.net"
+  },
+  {
+    name: "Youth to Youth",
+    category: "Service Based",
+    days: [],
+    meetingTime: "Twice a month after school",
+    location: "Room 206",
+    description: "BHHS Y2Y is a club that believes in the power of youth to influence their peers through positive peer pressure. Members of Y2Y pledge to be drug and alcohol-free, and work toward influencing their peers to do the same. Activities are focused on raising awareness of the risks associated with drug and alcohol use and making healthy decisions. Participation in Y2Y is open to all BHHS students.",
+    advisor: "Ms. Pagan",
+    email: "bpagan@byramhills.net"
+  },
+
+  // ===== GENERAL INTERESTS =====
+  {
+    name: "Art Works",
+    category: "General Interests",
+    days: [],
+    meetingTime: "TBD",
+    location: "TBD",
+    description: "The Byram Hills Art Gallery/BH Art Works is a student-run art gallery that creates a series of themed art exhibitions throughout the school year. We showcase the extraordinary talent and creativity of The Byram Hills High School students, faculty, and staff while giving the community an opportunity for recognition. If you'd like to showcase your artistic talents, just look in our Google Classroom for upcoming announcements and Calls for Entries. Our themed shows will include opportunities for many disciplines (including music, writing, painting, photography, etc.). If you are interested in setting up the gallery and learning skills such as hanging and matting artwork, howt o compose a gallery, and how to select artwork, we are always looking for behind the scenes help.",
+    advisor: "Ms. Karlin and Ms. Horn",
+    email: "jkarlin@byramhills.net and lhorn@byramhills.net"
+  },
+  {
+    name: "Byram Beat",
+    category: "General Interests",
+    days: ["Monday"],
+    meetingTime: "Mondays 2:45-3:30",
+    location: "Choir Room",
+    description: "Byram Hills' only acapella club is open to all students regardless of training or experience. The Byram Beat is a non-auditioned vocal group which rehearses after school on Tuesdays and performs periodically throughout the school year. The goal of the club is to provide an all inclusive singing experience to those interested in acapella singing and to prepare and perform selections from popular music.",
+    advisor: "Dr. Coates",
+    email: "dcoates@byramhills.net"
+  },
+  {
+    name: "Career Chats",
+    category: "General Interests",
+    days: [],
+    meetingTime: "Monthly after school, day of the week TBD",
+    location: "Room 108",
+    description: "The Career Chats club inspires curiosity, enhances career readiness, and broadens exploration among Byram Hills students. Through meaningful interactions and interviews with industry professionals, students will gain a clear vision of future career paths, equipping them with the confidence and optimism to discover their passions and excel in the workforce of tomorrow.",
+    advisor: "Mr. Eagle",
+    email: "eeagle@byramhills.net"
+  },
+  {
+    name: "Ceramics Club",
+    category: "General Interests",
+    days: ["Monday"],
+    meetingTime: "Every other Monday until 4 pm",
+    location: "Room 315",
+    description: "The Ceramics Club offers an outlet of creativity for people interested in the arts and looking to try something new. Our club provides a fun, creative, supportive and relaxing environment for all members after school! From sculpting to shaping clay on the wheel, this club is open to all students regardless of past experience.",
+    advisor: "Ms. Menasche",
+    email: "amenasche@byramhills.net"
+  },
+  {
+    name: "Chess Club",
+    category: "General Interests",
+    days: ["Thursday"],
+    meetingTime: "Every other Thursday 2:30-3:30",
+    location: "Room 418",
+    description: "The Chess club is for anyone who enjoys chess. All levels are welcome and we provide boards and pieces. The goal of the club is for students to get better at chess and socialize with friends. In addition, we will go to the Bristal to play chess with the Seniors there. The club meets on the first and third Tuesday of each month from 2:30-3:30 in room 418. Munchkins will be provided!",
+    advisor: "Mr. Kalish",
+    email: "jkalish@byramhills.net"
+  },
+  {
+    name: "Cooking and Baking Club",
+    category: "General Interests",
+    days: ["Wednesday"],
+    meetingTime: "Every other Wednesday",
+    location: "CCC",
+    description: "The Cooking and Baking Club is a great opportunity for students to not only engage with their peers but also have the ability to learn fun and exciting recipes to make and create. The club allows students to take part in collaborative recipes every other Wednesday in Room 317.",
+    advisor: "Ms. Berman",
+    email: "jberman@byramhills.net"
+  },
+  {
+    name: "Film Club",
+    category: "General Interests",
+    days: [],
+    meetingTime: "TBD",
+    location: "TBD",
+    description: "Open to all students at any level & interest, the Film Club provides an opportunity for students to be part of something fun, creative, and in a friendly environment. It's the perfect way to enjoy quality screen time from the comfort of your sofa; monthly topics include short film screenings, director Q&As, interviews, technical demonstrations, and lively discussions about movies we've seen and loved! If you are interested in watching movies and learning how to create them, attend a meeting of the Film Club at Byram. With this club, you can explore your interest in the film industry, such as writing, directing, producing, acting, and film editing.",
+    advisor: "Ms. Medrano",
+    email: "gmedrano@byramhills.net"
+  },
+  {
+    name: "Interior Design Club",
+    category: "General Interests",
+    days: [],
+    meetingTime: "TBD",
+    location: "TBD",
+    description: "The Interior Design Club provides a safe space for BHHS students to design, learn, and have fun. Members develop many new skills, such as collecting measurements and calculating data, recognizing fabrics/woods/textures/and colors, building a successful business, dealing with clientele, knowledge of art history/past trends, and working as a team. Whether you plan on majoring in art or are just looking for a low-stakes, fun, and creative environment, The Interior Design Club is open to all interested! Class Code: a2au6wln",
+    advisor: "Mrs. Cohen",
+    email: "ecohen@byramhills.net"
+  },
+  {
+    name: "Lift Up",
+    category: "General Interests",
+    days: [],
+    meetingTime: "Once a month",
+    location: "Weight Room",
+    description: "Our mission as a club is to encourage the student body to stay or get into shape. Whether it is for personal well being or working out for athletics we strive to promote all forms of exercise. Our club will be running some fundraisers to fund new equipment for the weight room. We will meet once a month to discuss dieting and exercise plans.",
+    advisor: "Mr. Twardy",
+    email: "btwardy@byramhills.net"
+  },
+  {
+    name: "Marketing & Media Club",
+    category: "General Interests",
+    days: [],
+    meetingTime: "See advisor for details",
+    location: "TBD",
+    description: "The Marketing & Media Club is perfect for students who have interests in digital marketing, media production, social media, communications, and design. We work as a marketing and production studio where each student has the opportunity to take on different roles to create content and marketing campaigns. Students learn to work as content creators, graphic designers, marketers, talent, and team members. We constantly have projects in production, so students can jump in and help when their schedules allow. This year's focus includes group marketing brainstorming sessions to help advocate and advertise for other clubs or events; district-based marketing/media projects; individual or group workshops based on student interest such as Knowing Your Target Audience, How to Reach Your Target Audience, Platform Usage, Photoshop, Video Content during a Pandemic, Video Editing, Front End Web Design, Graphic Design, and more; social media production for athletics including interviews for instagram content; and marketing projects for school plays, and general events like the Talent Show and Halloween Costume Contest. We are looking for Graphic Designers and video editors to make production easier.",
+    advisor: "Mr. Melso",
+    email: "bmelso@byramhills.net"
+  },
+  {
+    name: "Outdoor Adventure Club",
+    category: "General Interests",
+    days: [],
+    meetingTime: "After school to prepare for scheduled events like hiking, fishing, kayaking, indoor rock climbing, and ropes courses",
+    location: "TBD",
+    description: "The Outdoor Adventure Club is an organization designed to create opportunities for its members to appreciate the great outdoors and its many wonders. Club members are faced with outdoor challenges both as individuals and as a group. Each member is encouraged to understand the importance of responsibility for self and others and being dependable, especially in the outdoors. The club also participates in many community events, such as environmental cleanup days across Westchester County.",
+    advisor: "Mr. Gulick and Mr. Clark",
+    email: "jgulick@byramhills.net and jclarck@bryamhills.net"
+  },
+  {
+    name: "Reading Between the Lines",
+    category: "General Interests",
+    days: ["Wednesday"],
+    meetingTime: "Every first Wednesday of the month from 2:30-3:00",
+    location: "Library",
+    description: "We hope to encourage more discussions about literature and create a space where students can learn from the perspectives of others! The Reading Between the Lines Club meets the second Wednesday of every month in the library. Each month we vote on a new book from a variety of different genres.",
+    advisor: "Ms. Nardone",
+    email: "lnardone@byramhills.net"
+  },
+  {
+    name: "Strings and Things",
+    category: "General Interests",
+    days: ["Friday"],
+    meetingTime: "Every Friday after school",
+    location: "Room 114 (Science Research Room)",
+    description: "The Byram Hills Strings and Things Club is an interest club about all things, knitting, crochet, embroidery, sewing, string and friendship bracelets. We have it all! We meet to learn and teach new skills and create together, a fun and relaxing way to end the week. We welcome people of all skills and levels to strive to create a helpful, uplifting and productive community for everyone to practice their craft and give back through craft fairs and donations.",
+    advisor: "Dr. Matthew",
+    email: "cmatthew@byramhills.net"
+  },
+  {
+    name: "Talkin' Business",
+    category: "General Interests",
+    days: ["Tuesday"],
+    meetingTime: "Once a month on Tuesdays after school",
+    location: "Mr. Naughton's Room",
+    description: "Talkin' Business is a group that will allow you to learn the ways of entrepreneurship and business in a fun and outgoing environment. We will be having meetings 1-2 times a month in which we will gain knowledge about finance, real estate, entrepreneurship, and more from a first-hand perspective. We hope that hearing from multiple business gurus during guest speaker days will inspire you all to gain interest and potentially follow careers in this field. In the case where we are not hearing from a speaker, we will work in a \"shark tank\" environment where YOU will have the opportunity to collaborate with your peers and bring new ideas to the table.",
+    advisor: "Mr. Naughton",
+    email: "jnaughton@byramhills.net"
+  },
+  {
+    name: "Tech Club",
+    category: "General Interests",
+    days: ["Tuesday"],
+    meetingTime: "Tuesdays after school",
+    location: "TBD",
+    description: "To teach those who want to learn various technology-related skills. The Tech Club is open to anyone who has a passion for technology. Anyone who wants to come in and learn from someone who enjoys teaching the subject. If there aren't any club members well-versed on the topic, they may be able to find another person also interested in learning the same topic, and may be able to work with that person. To allow those who have technology related knowledge to solidify that knowledge by teaching it. Teaching a topic can help the teacher to better understand the subject, and may offer them a new perspective on the topic. In the case of the Tech Club, teachers will be the members of the club, and won't necessarily be expected to know everything about what they're teaching, but will be encouraged to share what they know. Working together, members of the Tech Club can fine tune their skills by creating useful and/or interesting hardware or software projects. Members can show each other different ways to approach and solve a problem. Some potential projects include designing a website or creating a video game.",
+    advisor: "Mr. Lewick",
+    email: "clewick@byramhills.net"
+  },
+  {
+    name: "The Varley Players",
+    category: "General Interests",
+    days: [],
+    meetingTime: "Based on rehearsal calendar for each show; see advisor for details",
+    location: "TBD",
+    description: "The Varley Players are the Theatrical Performing Arts Ensemble of Byram Hills High School. They produce three shows a year, ranging from plays to musical theatre. They are named after longtime director and supporter Joy Varley who helmed and helped guide the program for 28 years as a teacher and Director of Fine Arts. This is the 60th Anniversary of the Varley Players!",
+    advisor: "Dr. Coates",
+    email: "dcoates@byramhills.net"
+  },
+  {
+    name: "Turning Point USA",
+    category: "General Interests",
+    days: ["Tuesday"],
+    meetingTime: "First Tuesday of every month 2:30-3:15 pm",
+    location: "TBD",
+    description: "Our Mission for this Turning Point USA club is ultimately to bring other students with similar views to come together and talk about all of the crises occurring in today's world. After witnessing the loss of Charlie Kirk and watching how much of an impact he has created, we would love to continue his legacy. Our plan is to begin by starting a chapter directly affiliated with the Turning Point USA program so that we can truly make a difference and become active participants. This club will serve largely for educational purposes, but will also include debates and other opportunities for students to speak up on our discussed topics.",
+    advisor: "Ms. Montalbano",
+    email: "mmontalbano@byramhills.net"
   }
   {
     name: "Architecture Club",
