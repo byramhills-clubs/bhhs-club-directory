@@ -1,2 +1,2 @@
-# Byram Hills High School Club Directory
-<img width="988" height="263" alt="Clubs" src="https://github.com/byramhills-clubs/bhhs-club-directory/blob/main/Clubs.png" />
+<img width="500" alt="Clubs" src="https://github.com/byramhills-clubs/bhhs-club-directory/blob/main/Clubs.png" />
+A website for Byram Hills High School by the "Students Who Code Club"
