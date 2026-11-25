@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <link rel="icon" href="https://raw.githubusercontent.com/byramhills-clubs/bhhs-club-directory/main/favicon.png">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Byram Hills Clubs</title>
+<title>Byram Hills Club Directory</title>
 
 <style>
 * {
@@ -39,8 +39,8 @@
 
 @keyframes appear {
   from {
-      opacity: 0;
-      transform: translateY(35px) rotate(var(--rotation)) scale(.9);
+    opacity: 0;
+    transform: translateY(35px) rotate(var(--rotation)) scale(.9);
   }
   to {
     opacity: 1;
@@ -120,6 +120,28 @@ button:hover {
     <img id="thingy" src="https://i.ibb.co/sJgccpdS/Clubs.png">
     <button>Find Clubs ↗</button>
 </div>
+<script>
+const images = document.querySelectorAll(".image");
 
+function skewImagesTowardCursor(event) {
+  const pointerX = event.clientX;
+  const pointerY = event.clientY;
+
+  images.forEach((image) => {
+    const rect = image.getBoundingClientRect();
+    const centerX = rect.left + rect.width / 2;
+    const centerY = rect.top + rect.height / 2;
+
+    // Skew each image according to the cursor's position relative to it.
+    const skewX = ((pointerX - centerX) / window.innerWidth) * 12;
+    const skewY = ((pointerY - centerY) / window.innerHeight) * 6;
+
+    image.style.setProperty("--skew-x", `${skewX}deg`);
+    image.style.setProperty("--skew-y", `${skewY}deg`);
+  });
+}
+
+window.addEventListener("pointermove", skewImagesTowardCursor);
+</script>
 </body>
 </html>
