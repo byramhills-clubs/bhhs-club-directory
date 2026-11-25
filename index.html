@@ -18,6 +18,7 @@
 }
 
 .image {
+  transition: transform 150ms ease-out;
   position: absolute;
   object-fit: cover;
   border-radius: 12px;
@@ -40,11 +41,13 @@
 @keyframes appear {
   from {
     opacity: 0;
-    transform: translateY(35px) rotate(var(--rotation)) scale(.9);
+    transform: translateY(35px) rotate(var(--rotation))
+    skew(var(--skew-x, 0deg), var(--skew-y, 0deg)) scale(.9);
   }
   to {
     opacity: 1;
-    transform: translateY(0) rotate(var(--rotation)) scale(1);
+    transform: translateY(0) rotate(var(--rotation))
+    skew(var(--skew-x, 0deg), var(--skew-y, 0deg)) scale(1);
   }
 }
 
