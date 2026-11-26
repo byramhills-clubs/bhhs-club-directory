@@ -56,8 +56,9 @@
   opacity: 0 !important;
   transition: opacity 1s ease;
   animation: none;
+  transform: translateY(0) rotate(var(--rotation)) scale(1);
 }
-.content {
+#content {
   position: relative;
   z-index: 2;
   height: 100vh;
@@ -79,7 +80,7 @@ h1 {
   text-shadow: 0 5px 30px #000;
 }
 
-button {
+#TheButton {
   margin-top: 35px;
   padding: 18px 35px;
   border: 1pt solid white;
@@ -92,9 +93,13 @@ button {
   transition: .4s;
 }
 
-button:hover {
+#TheButton:hover {
   background: white;
   color: black;
+}
+
+#thingy{
+  width: 500pt;
 }
 
 @media (max-width: 800px) {
@@ -104,34 +109,42 @@ button:hover {
   #thingy{
     width: 300pt;
   }
+  #TheButton{
+    width: 120pt;
+    height: 40pt;
+    border-radius: 15pt;
+    text-wrap: none;
+    box-sizing: border-box;
+    padding: 5pt 10pt 5pt 10pt;
+  }
 }
-
 </style>
 </head>
 
 <body style="margin: 0; background: #111; font-family: Arial, sans-serif; overflow: hidden; user-select: none;">
 
 <div class="image-wall">
-    <img class="image" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.byramhills.org%2Fuploaded%2FMedia_Center%2F2025-2026%2FPress_Releases%2FArtsTA%2FArtsTA_3.jpg&f=1&nofb=1&ipt=41129b42cbf7b1df492da481b7f112967ce63f3d45e374df4e0ec8c56819ac81&ipo=images">
-    <img class="image" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.lohud.com%2Fgcdn%2Fauthoring%2Fauthoring-images%2F2026%2F02%2F28%2FPWES%2F88920816007-sec-1-class-a-semifinal-pearl-river-v-byram-hills-63.jpg%3Fwidth%3D660%26height%3D465%26fit%3Dcrop%26format%3Dpjpg%26auto%3Dwebp&f=1&nofb=1&ipt=bbba995caa4f40377b2860d467a3ff3daecf6e9e7dce5d2f4952f7c7f9d75a7e&ipo=images">
-    <img class="image" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.byramhills.org%2Fuploaded%2FMedia_Center%2F2022-2023_School_Year%2FNews_Photos%2FGirls_Tennis_Parade%2FParade-6.jpg&f=1&nofb=1&ipt=737dd1289910839625e2091aebdbed666e8cdd73294f8d8332e087193c769608&ipo=images">
-    <img class="image" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.byramhills.org%2Fuploaded%2FMedia_Center%2F2025-2026%2FPress_Releases%2FTri-M_Music_Induction%2FTri_M_Student_Inductees_2026.jpg&f=1&nofb=1&ipt=0e812d95214a9925202bd8f23e7e2da2c7a053f2574a0102f696b491d3ce169a&ipo=images">
-    <img class="image" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.byramhills.org%2Fuploaded%2FMedia_Center%2F2022-2023_School_Year%2FNews_Photos%2F331359428_725609122492447_3841704454143609742_n.jpg&f=1&nofb=1&ipt=4e491a1f28650e927d2a553e8c74c5cd8863d949aea10820a2164db85c571a04&ipo=images">
-    <img class="image" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.byramhills.org%2Fuploaded%2FMedia_Center%2F2025-2026%2FCommunity_Connection%2FJune_2026%2FCharney.jpg&f=1&nofb=1&ipt=3c96765950fcfaf34983450a91a4462059a4f87194a47e0614898c711a051c5c&ipo=images">
-    <img class="image" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.byramhills.org%2Fuploaded%2FMedia_Center%2F2025-2026%2FPress_Releases%2FASR_January%2FASR_Reg_300_v010726.jpg&f=1&nofb=1&ipt=4355801a5bde691043ab335b17722255ba87bff5317bd989e29b7d60541cc83d&ipo=images">
-    <img class="image" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.lohud.com%2Fgcdn%2Fpresto%2F2018%2F09%2F29%2FPWES%2F437371d8-448c-4861-9759-2bd1f30dac87-fb092818byram02.jpg%3Fcrop%3D3653%2C2055%2Cx0%2Cy145%26width%3D3200%26height%3D1801%26format%3Dpjpg%26auto%3Dwebp&f=1&nofb=1&ipt=040d6151b240bd2a7facb4f71f0804bb73f172a93c44b28e784c3b2e1666150b&ipo=images">
-    <img class="image" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.byramhills.org%2Fuploaded%2FMedia_Center%2F2025-2026%2FPress_Releases%2FCum_Laude_Induction%2FCL_FullGroup.jpg&f=1&nofb=1&ipt=1471ad1de16dfc5a90ebad813d7e33314b9c487823fb1463e78de9ae1ea6a572&ipo=images">
-    <img class="image" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.byramhills.org%2Fuploaded%2FMedia_Center%2F2023-2024_School_Year%2FSpectrum_Story_Images%2FRobotics_1.jpg&f=1&nofb=1&ipt=5b900ce41b90d24d9b6f2e167d66a89646ae22d7ccedc231b68382a8d0bd3f8c&ipo=images">
+  <img class="image" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.byramhills.org%2Fuploaded%2FMedia_Center%2F2025-2026%2FPress_Releases%2FArtsTA%2FArtsTA_3.jpg&f=1&nofb=1&ipt=41129b42cbf7b1df492da481b7f112967ce63f3d45e374df4e0ec8c56819ac81&ipo=images">
+  <img class="image" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.lohud.com%2Fgcdn%2Fauthoring%2Fauthoring-images%2F2026%2F02%2F28%2FPWES%2F88920816007-sec-1-class-a-semifinal-pearl-river-v-byram-hills-63.jpg%3Fwidth%3D660%26height%3D465%26fit%3Dcrop%26format%3Dpjpg%26auto%3Dwebp&f=1&nofb=1&ipt=bbba995caa4f40377b2860d467a3ff3daecf6e9e7dce5d2f4952f7c7f9d75a7e&ipo=images">
+  <img class="image" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.byramhills.org%2Fuploaded%2FMedia_Center%2F2022-2023_School_Year%2FNews_Photos%2FGirls_Tennis_Parade%2FParade-6.jpg&f=1&nofb=1&ipt=737dd1289910839625e2091aebdbed666e8cdd73294f8d8332e087193c769608&ipo=images">
+  <img class="image" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.byramhills.org%2Fuploaded%2FMedia_Center%2F2025-2026%2FPress_Releases%2FTri-M_Music_Induction%2FTri_M_Student_Inductees_2026.jpg&f=1&nofb=1&ipt=0e812d95214a9925202bd8f23e7e2da2c7a053f2574a0102f696b491d3ce169a&ipo=images">
+  <img class="image" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.byramhills.org%2Fuploaded%2FMedia_Center%2F2022-2023_School_Year%2FNews_Photos%2F331359428_725609122492447_3841704454143609742_n.jpg&f=1&nofb=1&ipt=4e491a1f28650e927d2a553e8c74c5cd8863d949aea10820a2164db85c571a04&ipo=images">
+  <img class="image" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.byramhills.org%2Fuploaded%2FMedia_Center%2F2025-2026%2FCommunity_Connection%2FJune_2026%2FCharney.jpg&f=1&nofb=1&ipt=3c96765950fcfaf34983450a91a4462059a4f87194a47e0614898c711a051c5c&ipo=images">
+  <img class="image" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.byramhills.org%2Fuploaded%2FMedia_Center%2F2025-2026%2FPress_Releases%2FASR_January%2FASR_Reg_300_v010726.jpg&f=1&nofb=1&ipt=4355801a5bde691043ab335b17722255ba87bff5317bd989e29b7d60541cc83d&ipo=images">
+  <img class="image" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.lohud.com%2Fgcdn%2Fpresto%2F2018%2F09%2F29%2FPWES%2F437371d8-448c-4861-9759-2bd1f30dac87-fb092818byram02.jpg%3Fcrop%3D3653%2C2055%2Cx0%2Cy145%26width%3D3200%26height%3D1801%26format%3Dpjpg%26auto%3Dwebp&f=1&nofb=1&ipt=040d6151b240bd2a7facb4f71f0804bb73f172a93c44b28e784c3b2e1666150b&ipo=images">
+  <img class="image" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.byramhills.org%2Fuploaded%2FMedia_Center%2F2025-2026%2FPress_Releases%2FCum_Laude_Induction%2FCL_FullGroup.jpg&f=1&nofb=1&ipt=1471ad1de16dfc5a90ebad813d7e33314b9c487823fb1463e78de9ae1ea6a572&ipo=images">
+  <img class="image" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.byramhills.org%2Fuploaded%2FMedia_Center%2F2023-2024_School_Year%2FSpectrum_Story_Images%2FRobotics_1.jpg&f=1&nofb=1&ipt=5b900ce41b90d24d9b6f2e167d66a89646ae22d7ccedc231b68382a8d0bd3f8c&ipo=images">
 </div>
 
-<div class="content">
-    <img style="width: 70pt;" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.byramhills.org%2Fuploaded%2FStaff_Resource_Icons%2FBH_Interlocked-RedOfficial-stroke.png&f=1&nofb=1&ipt=2045ebd639f7894c371688b3768bae253e8f13c0012ad0e1e47a57f084da3428&ipo=images">
-    <img id="thingy" src="https://i.ibb.co/sJgccpdS/Clubs.png">
-    <button onclick="fadeImages()">Find Clubs ↗</button>
+<div id="content">
+  <img style="width: 70pt;" src="https://raw.githubusercontent.com/byramhills-clubs/bhhs-club-directory/main/bhLogo.png">
+  <img id="thingy" src="https://raw.githubusercontent.com/byramhills-clubs/bhhs-club-directory/main/Clubs.png">
+  <button id="TheButton" onclick="browse()">Find Clubs ↗</button>
 </div>
 <script>
-function fadeImages() {
+function browse() {
   document.querySelector('.image-wall').classList.add('fade-out');
+  document.getElementById('TheButton').style.opacity = '0';
 }
 </script>
 </body>
