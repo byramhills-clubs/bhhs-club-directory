@@ -1,6 +1,3 @@
-// Add new clubs by copying one { ... } block and pasting it inside the brackets!
-// Categories must be one of: "Academic", "Community Building", "Service Based", "General Interests"
-// Days can be "Monday" to "Friday", or "Flexible" for monthly / TBD clubs.
 const CLUBS = [
   // ---------- ACADEMIC ----------
   {
@@ -600,3 +597,26 @@ const CLUBS = [
     email: "mmontalbano@byramhills.net"
   }
 ];
+
+function displayClubs() {
+  const clubList = document.getElementById("clubList");
+  clubList.innerHTML = "";
+
+  CLUBS.forEach(club => {
+    const card = document.createElement("div");
+    card.className = "club-card";
+
+    card.innerHTML = `
+      <h2>${club.name}</h2>
+      <span class="club-category">${club.category}</span>
+      <p><strong>Days:</strong> ${club.days.join(", ")}</p>
+      <p><strong>Meeting Time:</strong> ${club.meetingTime}</p>
+      <p><strong>Location:</strong> ${club.location}</p>
+      <p>${club.description}</p>
+      <p><strong>Advisor:</strong> ${club.advisor}</p>
+      ${club.email ? `<p><strong>Email:</strong> ${club.email.split(",").map(email => `<a href="mailto:${email.trim()}">${email.trim()}</a>`).join(", ")}</p>` : ""}
+    `;
+
+    clubList.appendChild(card);
+  });
+}
