@@ -97,35 +97,6 @@ button:hover {
   }
 }
 
-.image {
-  transform-origin: center;
-  transition: none;
-}
-
-.image-wall.gather .image {
-  animation: gather 1.5s ease-in forwards;
-}
-
-@keyframes gather {
-  0% {
-    opacity: 1;
-    transform: rotate(var(--rotation)) translate(0, 0) scale(1);
-  }
-  50% {
-    opacity: 1;
-    transform:
-      rotate(var(--rotation))
-      translate(0, 0)
-      rotate(360deg) scale(.7);
-  }
-  100% {
-    opacity: 0;
-    transform:
-      rotate(var(--rotation))
-      translate(0, 0)
-      rotate(1080deg) scale(0);
-  }
-}
 </style>
 </head>
 
@@ -149,10 +120,6 @@ button:hover {
     <img id="thingy" src="https://i.ibb.co/sJgccpdS/Clubs.png">
     <button>Find Clubs ↗</button>
 </div>
-<script>
-document.querySelector("button").addEventListener("click", () => {
-  document.querySelector(".image-wall").classList.add("gather");
-});
-</script>
+
 </body>
-</html>
+</html> 
