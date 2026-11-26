@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -26,16 +27,16 @@
   animation: appear 1s ease forwards;
 }
 
-.image:nth-child(1) { left: 2%; top: 3%; width: 17%; height: 32%; --rotation: -7deg; animation-delay: 0s, 1s; }
-.image:nth-child(2) { left: 22%; top: -5%; width: 16%; height: 27%; --rotation: 5deg; animation-delay: .1s, 1.1s; }
-.image:nth-child(3) { right: 22%; top: -3%; width: 17%; height: 29%; --rotation: -5deg; animation-delay: .2s, 1.2s; }
-.image:nth-child(4) { right: 2%; top: 5%; width: 18%; height: 32%; --rotation: 7deg; animation-delay: .3s, 1.3s; }
-.image:nth-child(5) { left: -4%; top: 40%; width: 19%; height: 32%; --rotation: 6deg; animation-delay: .4s, 1.4s; }
-.image:nth-child(6) { right: -3%; top: 42%; width: 20%; height: 32%; --rotation: -7deg; animation-delay: .5s, 1.5s; }
-.image:nth-child(7) { left: 5%; bottom: -5%; width: 18%; height: 30%; --rotation: -5deg; animation-delay: .6s, 1.6s; }
-.image:nth-child(8) { left: 28%; bottom: -8%; width: 17%; height: 28%; --rotation: 5deg; animation-delay: .7s, 1.7s; }
-.image:nth-child(9) { right: 27%; bottom: -7%; width: 18%; height: 30%; --rotation: -5deg; animation-delay: .8s, 1.8s; }
-.image:nth-child(10) { right: 5%; bottom: -5%; width: 17%; height: 29%; --rotation: 6deg; animation-delay: .9s, 1.9s; }
+.image:nth-child(1) { left: 2%; top: 3%; width: 17%; height: 32%; --rotation: -7deg; animation-delay: 0s; }
+.image:nth-child(2) { left: 22%; top: -5%; width: 16%; height: 27%; --rotation: 5deg; animation-delay: .1s; }
+.image:nth-child(3) { right: 22%; top: -3%; width: 17%; height: 29%; --rotation: -5deg; animation-delay: .2s; }
+.image:nth-child(4) { right: 2%; top: 5%; width: 18%; height: 32%; --rotation: 7deg; animation-delay: .3s; }
+.image:nth-child(5) { left: -4%; top: 40%; width: 19%; height: 32%; --rotation: 6deg; animation-delay: .4s; }
+.image:nth-child(6) { right: -3%; top: 42%; width: 20%; height: 32%; --rotation: -7deg; animation-delay: .5s; }
+.image:nth-child(7) { left: 5%; bottom: -5%; width: 18%; height: 30%; --rotation: -5deg; animation-delay: .6s; }
+.image:nth-child(8) { left: 28%; bottom: -8%; width: 17%; height: 28%; --rotation: 5deg; animation-delay: .7s; }
+.image:nth-child(9) { right: 27%; bottom: -7%; width: 18%; height: 30%; --rotation: -5deg; animation-delay: .8s; }
+.image:nth-child(10) { right: 5%; bottom: -5%; width: 17%; height: 29%; --rotation: 6deg; animation-delay: .9s; }
 
 @keyframes appear {
   from {
@@ -48,36 +49,39 @@
   }
 }
 
-.image {
-  transition: opacity 1s ease;
-}
-
 .image-wall.fade-out .image {
   opacity: 0 !important;
-  transition: opacity 1s ease;
+  transition: opacity 0.8s ease;
   animation: none;
   transform: translateY(0) rotate(var(--rotation)) scale(1);
 }
+
 #content {
   position: relative;
   z-index: 2;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
   padding: 20px;
-  background: radial-gradient(ellipse, rgba(0, 0, 0, .2), rgba(0, 0, 0, .35));
+  background: radial-gradient(ellipse, rgba(0,0,0,.2), rgba(0,0,0,.35));
+  transition: justify-content .7s ease;
+  overflow: hidden;
 }
 
-h1 {
-  color: white;
-  font-size: clamp(55px, 10vw, 90px);
-  font-weight: 900;
-  letter-spacing: -6px;
-  margin: 0;
-  text-shadow: 0 5px 30px #000;
+#logo, #thingy {
+  flex-shrink: 0;
+  transition: transform .7s ease, width .7s ease;
+}
+
+#logo {
+  width: 70pt;
+}
+
+#thingy {
+  width: 500pt;
 }
 
 #TheButton {
@@ -90,7 +94,7 @@ h1 {
   font-weight: bold;
   letter-spacing: 2px;
   cursor: pointer;
-  transition: .4s;
+  transition: opacity .3s ease;
 }
 
 #TheButton:hover {
@@ -98,54 +102,155 @@ h1 {
   color: black;
 }
 
-#thingy{
-  width: 500pt;
+
+#clubList {
+  display: none;
+  width: min(700px, 90vw);
+  height: 0;
+  background: rgb(23,23,23);
+  border-radius: 20px;
+  margin-top: 25px;
+  opacity: 0;
+  overflow-y: auto;
+  transition: height .7s ease, opacity .5s ease;
+}
+
+#content.open {
+  justify-content: flex-start;
+  padding-top: 25px;
+}
+
+#content.open #logo {
+  transform: scale(.75);
+}
+
+#content.open #thingy {
+  transform: scale(.75);
+}
+
+#content.open #TheButton {
+  display: none;
+}
+
+#content.open #clubList {
+  display: block;
+  height: 65vh;
+  opacity: 1;
+  animation: popup .7s ease forwards;
+}
+
+@keyframes popup {
+  from {
+    transform: translateY(80px) scale(.95);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
 }
 
 @media (max-width: 800px) {
   .image {
     display: none;
   }
-  #thingy{
+
+  #thingy {
     width: 300pt;
   }
-  #TheButton{
+
+  #TheButton {
     width: 120pt;
     height: 40pt;
     border-radius: 15pt;
-    text-wrap: none;
-    box-sizing: border-box;
-    padding: 5pt 10pt 5pt 10pt;
+    padding: 5pt 10pt;
+  }
+
+  #content.open {
+    padding-top: 15px;
+  }
+
+  #content.open #logo {
+    transform: scale(.65);
+  }
+
+  #content.open #thingy {
+    transform: scale(.75);
+  }
+
+  #content.open #clubList {
+    width: 95vw;
+    height: 65vh;
   }
 }
+
+#clubList {
+  padding: 15px;
+}
+
+.club-card {
+  background: none;
+  color: white;
+  text-align: left;
+  padding: 20px;
+  padding-top: 5pt;
+  margin-bottom: 15px;
+  border-radius: 14px;
+}
+
+.club-card h2 {
+  margin: 0 0 5px;
+}
+
+.club-card p {
+  line-height: 1.5;
+}
+
+.club-category {
+  display: inline-block;
+  background: #505050;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+.club-card a {
+  color: #8abaff;
+  text-decoration: none;
+}
+
 </style>
 </head>
 
-<body style="margin: 0; background: #111; font-family: Arial, sans-serif; overflow: hidden; user-select: none;">
+<body style="margin:0; background:#111; font-family:Arial,sans-serif; overflow:hidden; user-select:none;">
 
 <div class="image-wall">
-  <img class="image" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.byramhills.org%2Fuploaded%2FMedia_Center%2F2025-2026%2FPress_Releases%2FArtsTA%2FArtsTA_3.jpg&f=1&nofb=1&ipt=41129b42cbf7b1df492da481b7f112967ce63f3d45e374df4e0ec8c56819ac81&ipo=images">
-  <img class="image" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.lohud.com%2Fgcdn%2Fauthoring%2Fauthoring-images%2F2026%2F02%2F28%2FPWES%2F88920816007-sec-1-class-a-semifinal-pearl-river-v-byram-hills-63.jpg%3Fwidth%3D660%26height%3D465%26fit%3Dcrop%26format%3Dpjpg%26auto%3Dwebp&f=1&nofb=1&ipt=bbba995caa4f40377b2860d467a3ff3daecf6e9e7dce5d2f4952f7c7f9d75a7e&ipo=images">
-  <img class="image" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.byramhills.org%2Fuploaded%2FMedia_Center%2F2022-2023_School_Year%2FNews_Photos%2FGirls_Tennis_Parade%2FParade-6.jpg&f=1&nofb=1&ipt=737dd1289910839625e2091aebdbed666e8cdd73294f8d8332e087193c769608&ipo=images">
-  <img class="image" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.byramhills.org%2Fuploaded%2FMedia_Center%2F2025-2026%2FPress_Releases%2FTri-M_Music_Induction%2FTri_M_Student_Inductees_2026.jpg&f=1&nofb=1&ipt=0e812d95214a9925202bd8f23e7e2da2c7a053f2574a0102f696b491d3ce169a&ipo=images">
-  <img class="image" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.byramhills.org%2Fuploaded%2FMedia_Center%2F2022-2023_School_Year%2FNews_Photos%2F331359428_725609122492447_3841704454143609742_n.jpg&f=1&nofb=1&ipt=4e491a1f28650e927d2a553e8c74c5cd8863d949aea10820a2164db85c571a04&ipo=images">
-  <img class="image" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.byramhills.org%2Fuploaded%2FMedia_Center%2F2025-2026%2FCommunity_Connection%2FJune_2026%2FCharney.jpg&f=1&nofb=1&ipt=3c96765950fcfaf34983450a91a4462059a4f87194a47e0614898c711a051c5c&ipo=images">
-  <img class="image" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.byramhills.org%2Fuploaded%2FMedia_Center%2F2025-2026%2FPress_Releases%2FASR_January%2FASR_Reg_300_v010726.jpg&f=1&nofb=1&ipt=4355801a5bde691043ab335b17722255ba87bff5317bd989e29b7d60541cc83d&ipo=images">
-  <img class="image" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.lohud.com%2Fgcdn%2Fpresto%2F2018%2F09%2F29%2FPWES%2F437371d8-448c-4861-9759-2bd1f30dac87-fb092818byram02.jpg%3Fcrop%3D3653%2C2055%2Cx0%2Cy145%26width%3D3200%26height%3D1801%26format%3Dpjpg%26auto%3Dwebp&f=1&nofb=1&ipt=040d6151b240bd2a7facb4f71f0804bb73f172a93c44b28e784c3b2e1666150b&ipo=images">
-  <img class="image" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.byramhills.org%2Fuploaded%2FMedia_Center%2F2025-2026%2FPress_Releases%2FCum_Laude_Induction%2FCL_FullGroup.jpg&f=1&nofb=1&ipt=1471ad1de16dfc5a90ebad813d7e33314b9c487823fb1463e78de9ae1ea6a572&ipo=images">
-  <img class="image" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.byramhills.org%2Fuploaded%2FMedia_Center%2F2023-2024_School_Year%2FSpectrum_Story_Images%2FRobotics_1.jpg&f=1&nofb=1&ipt=5b900ce41b90d24d9b6f2e167d66a89646ae22d7ccedc231b68382a8d0bd3f8c&ipo=images">
+  <img class="image" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.byramhills.org%2Fuploaded%2FMedia_Center%2F2025-2026%2FPress_Releases%2FArtsTA%2FArtsTA_3.jpg&f=1&nofb=1">
+  <img class="image" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.lohud.com%2Fgcdn%2Fauthoring%2Fauthoring-images%2F2026%2F02%2F28%2FPWES%2F88920816007-sec-1-class-a-semifinal-pearl-river-v-byram-hills-63.jpg&f=1&nofb=1">
+  <img class="image" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.byramhills.org%2Fuploaded%2FMedia_Center%2F2022-2023_School_Year%2FNews_Photos%2FGirls_Tennis_Parade%2FParade-6.jpg&f=1&nofb=1">
+  <img class="image" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.byramhills.org%2Fuploaded%2FMedia_Center%2F2025-2026%2FPress_Releases%2FTri-M_Music_Induction%2FTri_M_Student_Inductees_2026.jpg&f=1&nofb=1">
+  <img class="image" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.byramhills.org%2Fuploaded%2FMedia_Center%2F2022-2023_School_Year%2FNews_Photos%2F331359428_725609122492447_3841704454143609742_n.jpg&f=1&nofb=1">
+  <img class="image" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.byramhills.org%2Fuploaded%2FMedia_Center%2F2025-2026%2FCommunity_Connection%2FJune_2026%2FCharney.jpg&f=1&nofb=1">
+  <img class="image" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.byramhills.org%2Fuploaded%2FMedia_Center%2F2025-2026%2FPress_Releases%2FASR_January%2FASR_Reg_300_v010726.jpg&f=1&nofb=1">
+  <img class="image" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.lohud.com%2Fgcdn%2Fpresto%2F2018%2F09%2F29%2FPWES%2F437371d8-448c-4861-9759-2bd1f30dac87-fb092818byram02.jpg&f=1&nofb=1">
+  <img class="image" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.byramhills.org%2Fuploaded%2FMedia_Center%2F2025-2026%2FPress_Releases%2FCum_Laude_Induction%2FCL_FullGroup.jpg&f=1&nofb=1">
+  <img class="image" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.byramhills.org%2Fuploaded%2FMedia_Center%2F2023-2024_School_Year%2FSpectrum_Story_Images%2FRobotics_1.jpg&f=1&nofb=1">
 </div>
 
 <div id="content">
-  <img style="width: 70pt;" src="https://raw.githubusercontent.com/byramhills-clubs/bhhs-club-directory/main/bhLogo.png">
+  <img id="logo" src="https://raw.githubusercontent.com/byramhills-clubs/bhhs-club-directory/main/bhLogo.png">
   <img id="thingy" src="https://raw.githubusercontent.com/byramhills-clubs/bhhs-club-directory/main/Clubs.png">
   <button id="TheButton" onclick="browse()">Find Clubs ↗</button>
+  <div id="clubList"></div>
 </div>
+
 <script>
 function browse() {
   document.querySelector('.image-wall').classList.add('fade-out');
-  document.getElementById('TheButton').style.opacity = '0';
+  document.getElementById('content').classList.add('open');
+  displayClubs();
 }
 </script>
+<script src="clubs.js"></script>
 </body>
-</html> 
+</html>
