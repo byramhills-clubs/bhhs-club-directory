@@ -48,6 +48,13 @@
   }
 }
 
+.image {
+  transition: opacity 1s ease;
+}
+
+.image-wall.fade-out .image {
+  opacity: 0;
+}
 .content {
   position: relative;
   z-index: 2;
@@ -118,8 +125,12 @@ button:hover {
 <div class="content">
     <img style="width: 70pt;" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.byramhills.org%2Fuploaded%2FStaff_Resource_Icons%2FBH_Interlocked-RedOfficial-stroke.png&f=1&nofb=1&ipt=2045ebd639f7894c371688b3768bae253e8f13c0012ad0e1e47a57f084da3428&ipo=images">
     <img id="thingy" src="https://i.ibb.co/sJgccpdS/Clubs.png">
-    <button>Find Clubs ↗</button>
+    <button onclick="fadeImages()">Find Clubs ↗</button>
 </div>
-
+<script>
+function fadeImages() {
+  document.querySelector('.image-wall').classList.add('fade-out');
+}
+</script>
 </body>
 </html> 
